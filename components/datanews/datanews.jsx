@@ -23,7 +23,7 @@ export default class Datanews extends React.Component {
                         return (
                             <li key={i}>
                                 <h3 className="heading">{event.title}</h3>
-                                <i className="icon" className="fa fa-clock-o"></i>
+                                <i className="fa fa-clock-o"></i>
                                 <time className="time">{moment(event.start).format("LLL")}</time>
                             </li>
                         );

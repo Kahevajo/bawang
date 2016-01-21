@@ -8,10 +8,26 @@ export default class FirstPage extends React.Component {
         super(props);
         // TODO set initial state from endpoints
         this.state = {
-            events: [],
+            events: [
+                {
+                    title: "Hacker kväll",
+                    start: Date.now()
+                },{
+                    title: "QN",
+                    start: Date.now()
+                }
+            ],
             news: [
                 {
-                    summary: "sdf"
+                    title: "Fyllnadsval på extra-SM",
+                    url: "https://datasektionen.se/nyheter/2918",
+                    summary: `
+Hej hopp!
+Nu på Extra-SM den 2:a februari kommer det ske ett fyllnadsval till D-SMF (Ledamot får Studiemiljöfråor) som kanske byter namn till D-SSF (Ledamot för Studiesociala frågor)??? ;P ;P ;P
+Hör är länken till nomineringsformuläret
+Se till att nominera nåon rolig som kan liva upp D-Rektoratets möten lite!
+Mer info finns påvalsidan :)
+Hello people.`
                 }
             ]
         };

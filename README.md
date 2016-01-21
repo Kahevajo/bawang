@@ -3,7 +3,7 @@ node express react
 
 ## Setup
     npm install
-    node server.js
+    npm start
 
 
 ## TODO

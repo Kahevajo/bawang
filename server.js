@@ -7,7 +7,6 @@ var browserify = require("browserify");
 var babelify = require("babelify");
 var Bawang = require("./components/bawang/bawang.jsx");
 var translateServer = require("./components/translate/server.js");
-var datanewsServer = require("./components/datanews/server.js");
 var fs = require("fs");
 
 
