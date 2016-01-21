@@ -2,23 +2,36 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Databaren from "../databaren/databaren.jsx";
 import {get_lang, TranslateContainer} from "../translate/translate.jsx";
-import Datafooter from "../datafooter/datafooter.jsx";
 import FirstPage from "../firstpage/firstpage.jsx";
 import Tajtan from "../tajtan/tajtan.jsx";
-import {Router, Route, Link} from 'react-router'
+import {Router, IndexRoute, Route, Link, browserHistory} from 'react-router';
+import Datafooter from "../datafooter/datafooter.jsx";
+import {createHistory} from 'history'
 
+
+class Container extends React.Component {
+    render() {
+        return (
+            <div>
+                <Databaren />
+                {this.props.children}
+                <Datafooter />
+            </div>
+        );
+    }
+}
 
 export default class Bawang extends React.Component {
     render() {
         return (
             <div>
                 <TranslateContainer startlang={this.props.language}>
-                    <Databaren />
-                    <Router>
-                        <Route path="/" component={FirstPage} />
-                        <Route path="/chapter" component={Tajtan} />
+                    <Router history={browserHistory}>
+                        <Route path="/" component={Container}>
+                            <IndexRoute component={FirstPage} />
+                            <Route path="/chapter" component={Tajtan} />
+                        </Route>
                     </Router>
-                    <Datafooter />
                 </TranslateContainer>
             </div>
         );
