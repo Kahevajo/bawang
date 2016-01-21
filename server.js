@@ -38,6 +38,5 @@ app.use('/components/', express.static('components'));
 
 app.get("/*", function(req, res) {
     translateServer.setlang(res, req);
-    res.type('html');
     res.sendFile(path.resolve("./index.html"));
 });

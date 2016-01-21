@@ -5,7 +5,7 @@ export function setlang(res, req) {
         var lang = req.cookies.language;
     } else {
         // Set language cookie based on browser setting. Prefer Swedish default to English;
-        var lang = req.acceptsLanguages(["sv", "en"]);
+        var lang = req.acceptsLanguages("sv");
         if(!lang) {
             lang = "en";
         }
