@@ -37,7 +37,7 @@ export default class FirstPage extends React.Component {
                         <div className="overlay">
                             <article className="article" style={{fontWeight: 900}}>
                                 <Translate>
-                                    <Lang lang="sv">Datasektionen är en ideel studentsektion under Tekniska Högskolans Studentkår som finns till för att alla som läser Datateknik på KTH ska få en så bra och givande studietid som möjligt.</Lang>
+                                    <Lang lang="sv">Datasektionen är en ideell studentsektion under Tekniska Högskolans Studentkår som finns till för att alla som läser Datateknik på KTH ska få en så bra och givande studietid som möjligt.</Lang>
                                     <Lang lang="en">Datasektionen is a non-profit student section under THS and is there for everyone who reads Computer Engineering at KTH to get such a good and productive study time as possible.</Lang>
                                 </Translate>
                             </article>
