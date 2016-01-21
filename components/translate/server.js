@@ -1,6 +1,6 @@
 // Identifices the what language to send to the client, looking at cookies and accept-header
 // Takes express res and req
-export function server_setup(res, req) {
+export function setlang(res, req) {
     if(req.cookies.language) {
         var lang = req.cookies.language;
     } else {

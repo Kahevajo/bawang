@@ -6,7 +6,6 @@ import React from "react";
 import Dataswitch from "../dataswitch/dataswitch.jsx";
 
 
-
 export function get_lang() {
     return document.cookie.split("language")[1].slice(1);
 }
