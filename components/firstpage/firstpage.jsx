@@ -54,13 +54,13 @@ Hello people.`
                             <article className="article" style={{fontWeight: 900}}>
                                 <Translate>
                                     <Lang lang="sv">Datasektionen är en ideell studentsektion under Tekniska Högskolans Studentkår som finns till för att alla som läser Datateknik på KTH ska få en så bra och givande studietid som möjligt.</Lang>
-                                    <Lang lang="en">Datasektionen is a non-profit student section under THS and is there for everyone who reads Computer Engineering at KTH to get such a good and productive study time as possible.</Lang>
+                                    <Lang lang="en">Datasektionen is a non-profit student section under THS and is there for everyone who studies Computer Engineering at KTH to give them a study time as good and productive as possible.</Lang>
                                 </Translate>
                             </article>
                             <article className="article">
                                 <Translate className="vidkth">
                                     <Lang lang="sv">På Datasektionen finns det många sätt att roa sig. Förutom studier i intressanta ämnen och episka fester anordnas det även qulturella tillställningar, hackerkvällar, sektionsmöten och mycket mer.</Lang>
-                                    <Lang lang="en">There are many ways to entertain yourself at Datasektionen. In addition to studies in interesting topics and epic parties we organize hacker evenings, pubs, section meetings and much more much more.</Lang>
+                                    <Lang lang="en">There are many ways to entertain yourself at Datasektionen. In addition to studying interesting topics and having epic parties, we organize hacking evenings, pubs, section meetings, and much more.</Lang>
                                 </Translate>
                             </article>
                             <img className="bgimg" src="/components/bawang/left.jpg" />
@@ -86,7 +86,7 @@ Hello people.`
                                 <p className="blib-par">
                                     <Translate className="vidkth">
                                         <Lang lang="sv">Datateknikprogrammet på KTH är en av Skandinaviens mest välrenommerade tekniska utbildningar och bland de främsta datateknikutbildningarna i världen. Efter examen har du breda karriärmöjligheter inom alla de branscher där datasystem är viktiga för verksamheten. Det kan alltså handla om allt från kultur, finans, handel eller vård till mer traditionella tekniska områden inom industrin. Arbetet handlar ofta om design och utveckling av produkter, men det är också möjligt att ägna sig åt undervisning eller konsultverksamhet.</Lang>
-                                        <Lang lang="en">The Computer Engineering at KTH is one of Scandinavia&#39;s most renowned technical programs and among the top computer science programs in the world. After graduation, you have broad career opportunities in all the sectors in which computer systems are important to the business. Thus it can be everything from culture, finance or commerce to more traditional technical areas of the industry. The work often involves the design and development of products, but it is also possible to engage in teaching or consulting.</Lang>
+                                        <Lang lang="en">Computer Engineering at KTH is one of Scandinavia&#39;s most renowned technical programs and among the top computer science programs in the world. After graduation, you have broad career opportunities in all the sectors in which computer systems are important to the business. Thus it can be everything from culture, finance or commerce to more traditional technical areas of the industry. The work often involves the design and development of products, but it is also possible to engage in teaching or consulting.</Lang>
                                     </Translate>
                                 </p>
                             </section>
@@ -118,7 +118,7 @@ Hello people.`
                                 <p className="blib-par">
                                     <Translate className="vidkth">
                                     <Lang lang="sv">Datasektionens näringslivsgrupp arbetar aktivt för ett nära samarbete mellan sektionens medlemmar och aktörer i näringslivet, som i många fall kan bli framtida arbetsgivare. Berätta om ert företag på en lunchföreläsning, eller få personlig kontakt med studenter från Sveriges högst rankade datautbildning <a href="http://www.topuniversities.com/university-rankings/university-subject-rankings/2015/computer-science-information-systems#sorting=rank+region=+country=203+faculty=+stars=false+search=">[1]</a> på vår årliga arbetsmarknadsdag.</Lang>
-                                        <Lang lang="en">The computer section's business group is working actively to create close cooperation between our members and future employers. Tell us about your company on a lunch lecture, or get personal contact with students from Sweden's highest ranked computer university <a href="http://www.topuniversities.com/university-rankings/university-subject-rankings/2015/computer-science-information-systems#sorting=rank+region=+country=203+faculty=+stars=false+search=">[1]</a> at our annual career fair.</Lang>
+                                        <Lang lang="en">The computer section's business group actively works to create close cooperation between our members and future employers. Tell us about your company on a lunch lecture, or get personal contact with students from Sweden's highest ranked computer university <a href="http://www.topuniversities.com/university-rankings/university-subject-rankings/2015/computer-science-information-systems#sorting=rank+region=+country=203+faculty=+stars=false+search=">[1]</a> at our annual career fair.</Lang>
                                     </Translate>
                                 </p>
                             </section>
