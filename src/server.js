@@ -29,8 +29,8 @@ const traverseData = (thing, props) => {
   if(typeof thing.loadData === 'function') {
     promises.push(thing.loadData(props))
   }
-  if(typeof thing.getChild === 'function' && typeof thing.getChild().loadData === 'function') {
-    promises.push(traverseData(thing.getChild(), props))
+  if(thing.Child && typeof thing.Child.loadData === 'function') {
+    promises.push(traverseData(thing.Child, props))
   }
   return Promise.all(promises).then(([one, child]) => ({...one, ...child}))
 }

@@ -21,18 +21,14 @@ export default function Calypso(Child) {
         size: 0,
         number: 0
       }
-
     }
 
+    static Child = Child
     static loadData({ location }) {
       if(!location) return Promise.resolve({})
 
       return fetch(CALYPSO_URL + location.search)
         .then(res => res.json())
-    }
-
-    static getChild() {
-      return Child
     }
 
     componentDidMount() {
@@ -45,7 +41,10 @@ export default function Calypso(Child) {
     }
 
     render() {
-      return <Child {...this.props} {...this.state} />
+      if(this.props.content.length && !this.state.content.length)
+        return <Child {...this.props} />
+      else
+        return <Child {...this.state} />
     }
   }
 }

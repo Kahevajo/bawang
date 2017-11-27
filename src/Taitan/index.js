@@ -45,6 +45,7 @@ export default function Taitan(Child) {
         })
     }
 
+    static Child = Child
     static loadData(props) {
       const url = TAITAN_URL + props.location.pathname
       return fetch(url)
@@ -65,11 +66,6 @@ export default function Taitan(Child) {
             window.location.href = url
         })
     }
-
-    static getChild() {
-      return Child
-    }
-
 
     render() {
       if(this.state.redirect || this.props.redirect)

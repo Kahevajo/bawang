@@ -7,7 +7,7 @@ import './Frontpage.less'
 
 class Frontpage extends Component {
   render() {
-    return <div id='frontpage'>
+    return <div className='frontpage'>
       <header>
         <div className='title'>
           <span className='thin left'>
@@ -23,14 +23,29 @@ class Frontpage extends Component {
           </span>
         </div>
       </header>
-      <div id='content'>
+      <div className='content flex'>
         <div className='col-md-4 intro' dangerouslySetInnerHTML={{__html: this.props.body}}></div>
         <div className='col-md-4 news'>
           <h2>
             Nyheter
           </h2>
           <ul>
-            <li>Aaaah</li>
+            {
+              this.props.content
+                .filter(item => item.itemType === 'POST')
+                .filter((_, i) => i < 5)
+                .map(item => <li key={item.id}>
+                  <h3>{ item.titleSwedish }</h3>
+                  <span>
+                    { new Date(item.publishDate)
+                        .toLocaleDateString('sv-SE', {day: 'numeric', month: 'short', year: 'numeric'}) }
+                  </span>
+                  &bull;
+                  <span>
+                    { item.publishAsDisplay || item.authorDisplay }
+                  </span>
+                </li>)
+            }
           </ul>
         </div>
         <div className='col-md-4 news'>
@@ -38,10 +53,24 @@ class Frontpage extends Component {
             Event
           </h2>
           <ul>
-            <li>Aaaah</li>
+            {
+              this.props.content
+                .filter(item => item.itemType === 'EVENT')
+                .filter((_, i) => i < 5)
+                .map(item => <li key={item.id}>
+                  <h3>{ item.titleSwedish }</h3>
+                  <span>
+                    { new Date(item.publishDate)
+                        .toLocaleDateString('sv-SE', {day: 'numeric', month: 'short', year: 'numeric'}) }
+                    &bull;
+                    { item.publishAsDisplay || item.authorDisplay }
+                  </span>
+                </li>)
+            }
           </ul>
         </div>
       </div>
+      <div className='content' dangerouslySetInnerHTML={{__html: this.props.sidebar}}></div>
     </div>
   }
 }
