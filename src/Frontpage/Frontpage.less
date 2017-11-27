@@ -1,0 +1,64 @@
+#frontpage {
+  header {
+    height: 400px;
+    padding: 2em;
+    text-align: center;
+    text-transform: uppercase;
+
+    .title {
+      color: #eee;
+      display: inline-block;
+
+
+      .bold {
+        font-size: 5em;
+        font-weight: bolder;
+        text-shadow: -1px -2px #ff0,
+                      1px  2px rgba(0, 0, 0, 0.2);
+
+        line-height: 1.3em;
+        img {
+          margin: 0 0.3em;
+          height: 1.3em;
+          vertical-align: text-top;
+        }
+      }
+
+      .thin {
+        color: #eee;
+        font-size: initial;
+        font-weight: lighter;
+        display: block;
+      }
+
+      .left {
+        text-align: left;
+        margin-bottom: -10px;
+      }
+
+      .right {
+        text-align: right;
+        margin-top: -10px;
+      }
+
+    }
+  }
+
+  #content {
+    position: relative;
+    top: -220px;
+    z-index: 21;
+    min-height: 0;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+}
+
+

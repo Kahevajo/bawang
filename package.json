@@ -1,32 +1,44 @@
 {
   "name": "bawang",
-  "version": "1.0.0",
-  "description": "",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/datasektionen/bawang.git"
-  },
-  "author": "",
-  "bugs": {
-    "url": "https://github.com/datasektionen/bawang/issues"
-  },
-  "homepage": "https://github.com/datasektionen/bawang#readme",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "babel-core": "^5.8.25",
-    "babelify": "^6.3.0",
-    "browserify": "^11.2.0",
-    "cookie-parser": "^1.4.0",
-    "express": "^4.13.3",
-    "font-awesome": "^4.4.0",
-    "history": "^2.0.0",
-    "merge": "^1.2.0",
-    "moment": "^2.10.6",
-    "normalize.css": "^3.0.3",
-    "react": "^0.14.3",
-    "react-dom": "^0.14.3",
-    "react-router": "^2.0.0-rc5"
+    "autoprefixer": "^7.1.6",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.2",
+    "babel-preset-react-app": "^3.1.0",
+    "css-loader": "^0.28.7",
+    "ejs": "^2.5.7",
+    "eslint": "^4.12.0",
+    "eslint-config-react-app": "^2.0.1",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.5.1",
+    "express": "^4.16.2",
+    "methone": "^0.3.4",
+    "morgan": "^1.9.0",
+    "postcss-loader": "^2.0.9",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-router-dom": "^4.2.2",
+    "style-loader": "^0.19.0",
+    "supervisor": "^0.12.0",
+    "transfer-webpack-plugin": "^0.1.4",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "scripts": {
+    "start": "npm run client:dev",
+    "client:dev": "webpack-dev-server --config webpack.client.config.js --inline --colors",
+    "server:dev": "webpack --config webpack.server.config.js --color --watch",
+    "server:dev:run": "supervisor dist/server.js",
+    "server:prod": "webpack --color && node dist/server.js"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
   }
 }
