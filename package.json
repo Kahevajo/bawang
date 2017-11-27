@@ -32,13 +32,15 @@
     "webpack-node-externals": "^1.6.0"
   },
   "scripts": {
-    "start": "npm run client:dev",
+    "start": "npm run server:dev",
     "client:dev": "webpack-dev-server --config webpack.client.config.js --inline --colors",
     "server:dev": "webpack --config webpack.server.config.js --color --watch",
-    "server:dev:run": "supervisor dist/server.js",
     "server:prod": "webpack --color && node dist/server.js"
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "devDependencies": {
+    "reload-server-webpack-plugin": "^1.0.1"
   }
 }

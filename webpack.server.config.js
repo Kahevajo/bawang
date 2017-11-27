@@ -1,6 +1,7 @@
 var webpack = require('webpack');
 var path = require('path');
 var TransferWebpackPlugin = require('transfer-webpack-plugin');
+var ReloadServerPlugin = require('reload-server-webpack-plugin');
 
 var nodeExternals = require('webpack-node-externals');
 
@@ -15,6 +16,11 @@ module.exports = [
       path: path.resolve(__dirname, './dist/'),
       filename: 'server.js',
     },
+    plugins: [
+      new ReloadServerPlugin({
+        script: path.resolve(__dirname, './dist/server.js'),
+      }),
+    ],
     externals: nodeExternals(),
     module: {
       rules: [
